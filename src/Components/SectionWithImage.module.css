@@ -1,0 +1,9 @@
+.imageLeft {
+    display: flex;
+    flex-direction: row;
+}
+
+.imageRight {
+    display: flex;
+    flex-direction: row-reverse;
+}

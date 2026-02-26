@@ -1,3 +1,4 @@
+import styles from './SectionWithImage.module.css';
 
 export function SectionWithImage({title, text, imageSrc, imagePosition}) {
 
