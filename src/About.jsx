@@ -1,8 +1,8 @@
-export function About({ user }){
+export function About(){
     return(
         <section>
-            <h2>About {user.name}</h2>
-            <p>Age: {user.age}</p>
+            <h2>About</h2>
+            <p>Age</p>
         </section>
     )
 }

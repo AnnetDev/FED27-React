@@ -1,4 +1,3 @@
-import {Navbar} from "./Navbar";
 import {useState} from "react";
 import {About} from "./About";
 
@@ -55,7 +54,6 @@ export function Home(){
     console.log(user)
     return (
         <>
-            <Navbar/>
             <About user={user}/>
             <form>
                 <input type="text" name="username" placeholder='Name' onChange={handleFormUpdates} />
