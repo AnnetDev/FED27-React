@@ -574,3 +574,7 @@ When you run the app, you should see:
 - The theme applies consistently across all pages
 
 ---
+
+
+git fetch upstream git checkout main git merge upstream/main git push origin main
+

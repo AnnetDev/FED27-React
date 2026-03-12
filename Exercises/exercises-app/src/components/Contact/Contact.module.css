@@ -1,0 +1,66 @@
+.container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+.container h1 {
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 1.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.field label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.field input,
+.field textarea {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: #1a1a2e;
+}
+
+.field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.submitButton {
+    align-self: flex-start;
+    padding: 0.65rem 1.6rem;
+    background-color: #1a1a2e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+    background-color: #e94560;
+}

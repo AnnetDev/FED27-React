@@ -39,3 +39,10 @@ The `Exercises/` folder contains guided practice exercises. See [Exercises/READM
 **Current exercises:**
 
 - **Exercise 1:** Components, Props, and Layout
+
+
+
+git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
