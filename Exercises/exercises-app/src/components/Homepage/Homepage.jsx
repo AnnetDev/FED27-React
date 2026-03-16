@@ -4,7 +4,7 @@ import { useState } from "react";
 import { MyButton } from "../MyButton";
 import Avatar from "../Avatar";
 import { Clock } from "../../utils/utils";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 function Button({ count, onClick }) {
     return (
@@ -40,7 +40,8 @@ const Homepage = () => {
     const [count, setCount] = useState(0);
     const [time, setTime] = useState(new Date().toLocaleTimeString());
     const [option, selectedOption] = useState("option1");
-    
+    const bottomRef = useRef(null);
+
     const colorMap = [
         {id: "option1", color: "#800000", name: "Maroon"},
         {id: "option2", color: "#A9A9A9", name: "Dark Grey"},
@@ -57,10 +58,17 @@ const Homepage = () => {
             setTime(new Date().toLocaleTimeString());
         }, 1000);
     });
+
+    function scrollToBottom() {
+        bottomRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    
     
     return (
         <Layout>
             <div className={styles.container}>
+                <button className={styles.button} onClick={scrollToBottom}>Scroll to Bottom</button>
                 <h1 className={styles.title}>Welcome to the Homepage!</h1>
                 <p className={styles.description}>
                     This is a simple homepage created with React.
@@ -114,7 +122,8 @@ const Homepage = () => {
                             <li key={person.id}>{person.name}</li>
                         ))}
                     </ul>
-                    
+
+                    <div ref={bottomRef} />
             </div>
         </Layout>
     );
