@@ -16,6 +16,7 @@ import { Services } from "./Components/Pages/Services";
 import {CharacterProvider} from "./Context/CharacterContext";
 import {Layout} from "./HIComponents/Layout";
 import {Homepage} from "./HIComponents/Homepage";
+import {RefExample} from "./useRef/RefExample";
 
 
 const App = () => {
@@ -60,7 +61,23 @@ const App = () => {
           <Route index element={<Homepage/>} />
         </Route>
 
-          <Route path="/useRef" element={<>UseRef</>} />
+        {/* Nested Routes Example - go to /dashboard or /dashboard/settings or /dashboard/profile */}
+        <Route path="dashboard" element={<Dashboard />}>
+          <Route index element={<DashboardHome />} />
+          <Route path="settings" element={<Settings />} />
+          <Route path="profile" element={<Profile />} />
+        </Route>
+
+        {/* Nested Dynamic Routes Example - go to /products or /products/1 or /products/1/reviews */}
+        <Route path="products" element={<Products />}>
+          <Route index element={<ProductsList />} />
+          <Route path=":productId" element={<ProductDetail />}>
+            <Route index element={<ProductSpecs />} />
+            <Route path="reviews" element={<ProductReviews />} />
+          </Route>
+        </Route>
+
+          <Route path="/useRef" element={<RefExample />} />
 
       </Routes>
     </BrowserRouter>
