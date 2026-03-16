@@ -14,6 +14,7 @@ import { MainLayout } from "./Components/Layouts/MainLayout";
 import { Contact } from "./Components/Pages/Contact";
 import { Services } from "./Components/Pages/Services";
 import {CharacterProvider} from "./Context/CharacterContext";
+import {RefExample} from "./useRef/RefExample";
 
 
 const App = () => {
@@ -45,7 +46,7 @@ const App = () => {
           </Route>
         </Route>
 
-          <Route path="/useRef" element={<>UseRef</>} />
+          <Route path="/useRef" element={<RefExample />} />
 
       </Routes>
       </CharacterProvider>
