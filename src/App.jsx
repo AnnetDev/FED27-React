@@ -17,6 +17,7 @@ import {CharacterProvider} from "./Context/CharacterContext";
 import {Layout} from "./HIComponents/Layout";
 import {Homepage} from "./HIComponents/Homepage";
 
+
 const App = () => {
   return (
     // <BrowserRouter>
@@ -58,6 +59,9 @@ const App = () => {
         <Route element={<Layout />}>
           <Route index element={<Homepage/>} />
         </Route>
+
+          <Route path="/useRef" element={<>UseRef</>} />
+
       </Routes>
     </BrowserRouter>
   );
