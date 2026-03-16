@@ -1,6 +1,29 @@
 import React from 'react';
 import Layout from '../Layout';
 import styles from './Contact.module.css';
+import { Fragment} from 'react';
+
+const poem = {
+    lines: [
+        'I write, erase, rewrite',
+        'Erase again, and then',
+        'A poppy blooms.'
+    ]
+};
+
+function Poem() {
+    return (
+        <article>
+            {poem.lines.map((line, i) =>
+                <Fragment key={i}>
+                    {i > 0 && <hr />}
+                    <p>{line}</p>
+                </Fragment>
+            )}
+        </article>
+    );
+}
+
 
 const Contact = () => {
     return (
@@ -22,6 +45,8 @@ const Contact = () => {
                     </div>
                     <button type="submit" className={styles.submitButton}>Send</button>
                 </form>
+                <Poem />
+
             </div>
         </Layout>
     );

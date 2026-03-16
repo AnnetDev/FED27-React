@@ -7,6 +7,7 @@ export function Navigation () {
         { name: "Homepage", to: "/", content: "Home" },
         { name: "About", to: "/about", content: "About" },
         { name: "Contact", to: "/contact", content: "Contact" },
+        { name: "UseRefPage", to: "/useref", content: "UseRefPage" },
     ];
 
     return (
